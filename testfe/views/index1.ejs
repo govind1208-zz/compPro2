@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <% if(customer){ %>
+    <% customer.forEach(function(cust) { %>
+      <h2><%= cust.name %></h2>
+      <% }) %>
+      <% } %>
+    
+    <form action="index1post" method="post">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username">  
+      <label for="userroll">Userroll</label>
+      <input type="text" name="userroll" id="userroll">  
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
